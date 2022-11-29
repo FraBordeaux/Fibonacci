@@ -10,7 +10,7 @@ body{
 header{
     height: 300px;
     width: 100%;
-    background-image: url('the-golden-ratio-teaser.jpeg');
+    background-image: url('header_image.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,12 +30,12 @@ td{
 }
 
 .darker-line{
-    background-color: bisque;
+    background-color: rgba(246, 177, 74, 0.739);
 }
 
 .show{
     display: block;
-    color: darkgreen;
+    color: rgb(0, 73, 97);
 }
 
 .hide{
