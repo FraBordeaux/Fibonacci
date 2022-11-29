@@ -6,7 +6,12 @@ window.addEventListener("DOMContentLoaded", () =>{
         document.querySelector('tbody').innerHTML =``; // clear result display area
         const num = document.querySelector('#js-number-entered').value; // retrieve input
         // if input valid then fibonacci, else display error
-        isEntryValid(num) ? generateFibonacci(num) : document.querySelector("#js-display-error").classList.replace("hide","show");
+        if(isEntryValid(num)){
+            generateFibonacci(num);
+        }else{
+            document.querySelector("#js-display-error").classList.replace("hide","show");
+            document.querySelector(".table").classList.replace("show","hide");
+        }
     })
 });
 
@@ -42,6 +47,8 @@ const postOutput = () => {
     let arr = window.fibArray;
     let rapport = 0;
 
+    document.querySelector(".table").classList.replace("hide","show");
+    
     for(let i = 0 ; i < arr.length ; i++){
 
         // at index 0, all is 0
